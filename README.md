@@ -9,6 +9,8 @@
 5. Авто-тесты писать не требуется
 
 ---
+[![Build status](https://ci.appveyor.com/api/projects/status/3i4q6sgkv0ge02hm?svg=true)](https://ci.appveyor.com/project/Turovae/ahj-dnd-trello)
+---
 
 ### Trello
 
