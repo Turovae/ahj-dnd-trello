@@ -5,6 +5,17 @@ export default class StateService {
     this._states = {};
   }
 
+  updateAllStates() {
+    const container = document.querySelector(`.${this.name}`);
+
+    this.getNames().forEach((name) => {
+      const selector = name.toLowerCase().replace(/\W/, '-');
+      const element = container.querySelector(`.${selector}`);
+      const cardTitles = element.querySelectorAll('.card-title');
+      this.setState(name, [...cardTitles].map((title) => title.textContent));
+    });
+  }
+
   fillStates(states) {
     this._states = states;
   }
@@ -15,10 +26,6 @@ export default class StateService {
 
   getNames() {
     return Object.keys(this._states);
-  }
-
-  redrawStates() {
-    this.state = {};
   }
 
   getState(name) {

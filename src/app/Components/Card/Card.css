@@ -1,17 +1,21 @@
-.card {
-  padding: 10px 5px;
+.list-item {
   border-radius: 2px;
   box-shadow: 0 2px #bcc2c9;
   position: relative;
+  list-style: none;
+}
+
+.card {
+  padding: 10px 5px;
 }
 
 .card:hover {
   cursor:grab;
 }
 
-.card:active {
+/* .card:active {
   cursor: grabbing;
-}
+} */
 
 .del-btn {
   display: none;
@@ -28,4 +32,20 @@
   padding: 0 2px;
   background: #cecece;
   border-radius: 2px;
+}
+
+.card-stub {
+  background: #d1d8e0;
+  cursor: grabbing;
+}
+
+.dragged {
+  cursor: grabbing;
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  /* width: 100%; */
+  /* border: 1px  solid gray; */
+  box-shadow: 0 2px #bcc2c9, 2px 4px 15px 7px #bcc2c9;
+  pointer-events: none;
 }
