@@ -1,0 +1,31 @@
+.card {
+  padding: 10px 5px;
+  border-radius: 2px;
+  box-shadow: 0 2px #bcc2c9;
+  position: relative;
+}
+
+.card:hover {
+  cursor:grab;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.del-btn {
+  display: none;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+}
+
+.card:hover .del-btn {
+  display: block;
+  cursor: pointer;
+  padding: 0 2px;
+  background: #cecece;
+  border-radius: 2px;
+}

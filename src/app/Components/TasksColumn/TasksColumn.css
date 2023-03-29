@@ -1,0 +1,34 @@
+.column {
+  flex: 1;
+  background-color: #fff;
+  margin: 4px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.column-header {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.column-footer {
+  margin-top: 5px;
+}
+
+.open-form {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #828f9a;
+}
+
+.dragged {
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+  /* width: 100%; */
+  /* border: 1px  solid gray; */
+  box-shadow: 0 2px #bcc2c9, 2px 4px 15px 5px #bcc2c9;
+}

@@ -1,0 +1,21 @@
+.textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-shadow: 0 2px #bcc2c9;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+.add-btn {
+  cursor: pointer;
+  background-color: #5fab4c;
+  outline: none;
+  border: none;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 3px;
+  text-shadow: 0 0 4px #578f4a;
+  box-shadow: 0 1px #436f2b;
+}

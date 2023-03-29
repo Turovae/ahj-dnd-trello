@@ -17,36 +17,5 @@ ul {
   background-color: #3c74bb;
   padding: 4px;
   align-items: flex-start;
-}
-
-.column {
-  flex: 1;
-  background-color: #fff;
-  margin: 4px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 2px;
-}
-
-.column-header {
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.card {
-  padding: 10px 5px;
-  border-radius: 2px;
-  box-shadow: 0 2px #bcc2c9;
-}
-
-.column-footer {
-  margin-top: 5px;
-}
-
-.add-card {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  color: #828f9a;
+  margin-top: 10px;
 }
