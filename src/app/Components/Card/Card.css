@@ -42,10 +42,12 @@
 .dragged {
   cursor: grabbing;
   position: fixed;
+  display: block;
   z-index: 9999;
   background: #fff;
   /* width: 100%; */
   /* border: 1px  solid gray; */
   box-shadow: 0 2px #bcc2c9, 2px 4px 15px 7px #bcc2c9;
   pointer-events: none;
+  transform: rotate(3deg);
 }
