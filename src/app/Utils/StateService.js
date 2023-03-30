@@ -5,6 +5,12 @@ export default class StateService {
     this._states = {};
   }
 
+  init(names) {
+    names.forEach((name) => {
+      this.setState(name, []);
+    });
+  }
+
   updateAllStates() {
     const container = document.querySelector(`.${this.name}`);
 
@@ -16,8 +22,12 @@ export default class StateService {
     });
   }
 
-  fillStates(states) {
-    this._states = states;
+  set states(obj) {
+    if ((typeof obj) === 'object') {
+      this._states = obj;
+    } else {
+      this._states = {};
+    }
   }
 
   get states() {
@@ -46,6 +56,21 @@ export default class StateService {
     const states = this._states[name];
     if (states.includes(state)) {
       this._states[name] = states.filter((card) => card !== state);
+    }
+  }
+
+  saveToStorage() {
+    const str = JSON.stringify(this.states);
+    localStorage.setItem(this.name, str);
+  }
+
+  getFromStorage() {
+    try {
+      this.states = JSON.parse(localStorage.getItem(this.name));
+      if (Object.keys(this.states).length === 0) return false;
+      return true;
+    } catch (e) {
+      return false;
     }
   }
 }

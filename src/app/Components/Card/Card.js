@@ -55,8 +55,10 @@ export default class Card {
   }
 
   deleteCard() {
-    this.stateService.deleteState(this.parent.title, this.title);
-    this.parent.renderCards();
+    // this.stateService.deleteState(this.parent.title, this.title);
+    // this.parent.renderCards();
+    this.element.remove();
+    this.stateService.updateAllStates();
   }
 
   startDrag(event) {
