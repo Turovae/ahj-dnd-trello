@@ -66,8 +66,12 @@ export default class StateService {
 
   getFromStorage() {
     try {
-      this.states = JSON.parse(localStorage.getItem(this.name));
-      return Object.keys(this.states).length !== 0;
+      const fromStorage = JSON.parse(localStorage.getItem(this.name));
+      if (Object.keys(fromStorage).length) {
+        this.states = fromStorage;
+        return true;
+      }
+      return false;
     } catch (e) {
       return false;
     }
